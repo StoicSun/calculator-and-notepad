@@ -168,3 +168,16 @@ body          {
     right: 286px;
   }
 }
+
+.github-link {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  background-color: transparent;
+  border: none; 
+  outline: none;
+}
+
+.gh-logo {
+  border-radius: 50%;
+}
