@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+/* quick reset so all the padding is the right size */
+* {
+  box-sizing: border-box;
+}
+
+/* add some spacing */
+body          {
+  background: #fae0e5;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* limit the width and center */
+.calculator   {
+  max-width: 400px;
+  margin: 0 -45px;
+  border: 2px solid #111;
+  border-radius: 5px;
+  font-family: 'red hat mono';
+}
+
+.calc-btn  {
+  background: #303133;
+  border: 1px solid rgb(31, 31, 31); /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+  font-family: 'red hat mono';
+}
+
+.calc-btn:active  {
+  transform: translateY(4px);
+}
+
+.calculator input   {
+  /* reset basic form styles */
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid #111;
+  color: #333;
+  text-align: right;
+  font-size: 40px;
+  border-radius: 0;
+}
+
+.calc-btns {
+  /* small spacing within our container */
+  padding: 20px;
+
+  /* the grid stuff! */
+  display: grid;
+
+  /* create 4 columns */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  /* add the grid gap */
+  grid-gap: 10px;
+}
+
+/* span across 3 columns */
+.plus  {
+  grid-row: span 2;
+}
+
+.clear {
+  background: #F08080;
+  border: none;
+}
+
+.paper {
+  position: relative;
+  height: 550px;
+  width: 450px;
+  background: rgba(255,255,255,0.9);
+  margin: -312px -190px;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  height: 100%;
+  width: 2px;
+  background: rgba(255,0,0,0.4);
+}
+.lines {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, rgba(70, 131, 180, 0.384) 25px);
+}
+.text {
+  position: absolute;
+  top: 82px;
+  left: 55px;
+  bottom: 10px;
+  right: 10px;
+  line-height: 25px;
+  font-family: 'Indie Flower';
+  overflow: hidden;
+  outline: none;
+  font-size: large;
+}
+
+.holes {
+  position: absolute;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background: #fae0e5;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2px 0px #888;
+}
+.hole-top {
+  top: 10%;
+}
+.hole-middle {
+  top: 50%;
+}
+.hole-bottom {
+  bottom: 10%;
+}
+
+.eraser-btn {
+  top: 98px;
+  right: 286px;
+  position: absolute;
+  background-color: transparent;
+  border: none; 
+  outline: none;
+}
+
+.eraser-ani {
+  x-transition: all 0.8s ease-in-out;
+  animation: ani 0.5s 2;
+}
+
+@keyframes ani {
+  0% {
+    right: 286px;
+  }
+  50% {
+    right: 276px;
+  }
+  100% {
+    right: 286px;
+  }
+}
