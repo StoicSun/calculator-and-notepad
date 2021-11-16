@@ -3,7 +3,7 @@
 This project was created to practice vanilla js.
 
 ## Screenshot
-![screenshot](mFObR1dfgf.png)
+![screenshot](images/mFObR1dfgf.png)
 
 ## Credits
 - [Javascript crash course by Brad Traversy](https://www.youtube.com/watch?v=hdI2bqOjy3c)
