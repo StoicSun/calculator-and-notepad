@@ -64,7 +64,7 @@ function factorial(x) {
     inputDigit = parseFloat(x)
     let factorial = 1;
     if (inputDigit === 0 || inputDigit === 1) {
-        usrInput = '1';
+        usrInput.value = '1';
     }
     for (let i = 1; i <= inputDigit; i++) {
         factorial *= i;
